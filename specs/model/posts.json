@@ -1,0 +1,28 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Posts Schemas",
+    "description": "The API schemas for the posts domain",
+    "version": "1.0.0"
+  },
+  "components": {
+    "schemas": {
+      "PostResponse": {
+        "type": "object",
+        "summary": "Object that stores the data of a post",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "UUID"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

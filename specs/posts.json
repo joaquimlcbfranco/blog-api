@@ -1,0 +1,28 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Posts API",
+    "description": "The API paths for the posts domain",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/posts": {
+      "get": {
+        "operationId": "getAllPosts",
+        "summary": "Returns a list of posts",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./model/posts.json#/components/schemas/PostResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
