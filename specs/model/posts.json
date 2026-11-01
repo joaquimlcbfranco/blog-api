@@ -7,7 +7,7 @@
   },
   "components": {
     "schemas": {
-      "PostResponse": {
+      "Post": {
         "type": "object",
         "summary": "Object that stores the data of a post",
         "properties": {
@@ -21,6 +21,12 @@
           "description": {
             "type": "string"
           }
+        }
+      },
+      "PostsResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Post"
         }
       }
     }
