@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.joaquimlcbfranco</groupId>
     <artifactId>blog-api</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.3-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <url>https://github.com/joaquimlcbfranco/blog-api</url>
@@ -32,28 +32,26 @@
                 <groupId>org.openapitools</groupId>
                 <artifactId>openapi-generator-maven-plugin</artifactId>
                 <version>7.26.0</version>
+                <configuration>
+                    <generatorName>spring</generatorName>
+                    <apiPackage>com.example.blog.api</apiPackage>
+                    <modelPackage>com.example.blog.api.model</modelPackage>
+                    <configOptions>
+                        <interfaceOnly>true</interfaceOnly>
+                        <useSpringBoot3>true</useSpringBoot3>
+                        <skipDefaultInterface>true</skipDefaultInterface>
+                        <openApiNullable>false</openApiNullable>
+                    </configOptions>
+                </configuration>
                 <executions>
                     <execution>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
+                        <id>posts</id>
+                        <goals><goal>generate</goal></goals>
                         <configuration>
-                            <inputSpecRootDirectory>${project.basedir}/specs</inputSpecRootDirectory>
-                            <generatorName>spring</generatorName>
-                            <apiPackage>com.example.blog.api</apiPackage>
-                            <modelPackage>com.example.blog.api.model</modelPackage>
-                            <configOptions>
-                                <interfaceOnly>true</interfaceOnly>
-                                <useSpringBoot3>true</useSpringBoot3>
-                                <useTags>true</useTags>
-                                <skipDefaultInterface>true</skipDefaultInterface>
-                                <openApiNullable>false</openApiNullable>
-                                <useTags>false</useTags>
-                            </configOptions>
+                            <inputSpec>${project.basedir}/specs/posts.json</inputSpec>
                         </configuration>
                     </execution>
                 </executions>
-
             </plugin>
         </plugins>
     </build>
