@@ -50,7 +50,14 @@
         },
         "responses": {
           "201": {
-            "description": "Created"
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": ".model/posts.json#/components/schemas/PostResponse"
+                }
+              }
+            }
           }
         }
       }
@@ -105,7 +112,14 @@
         },
         "responses": {
           "200": {
-            "description": "Updated"
+            "description": "Updated",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": ".model/posts.json#/components/schemas/PostResponse"
+                }
+              }
+            }
           }
         }
       }
