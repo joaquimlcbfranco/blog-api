@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.joaquimlcbfranco</groupId>
     <artifactId>blog-api</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.4-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <url>https://github.com/joaquimlcbfranco/blog-api</url>
