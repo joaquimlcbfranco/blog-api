@@ -54,7 +54,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": ".model/posts.json#/components/schemas/PostResponse"
+                  "$ref": "./model/posts.json#/components/schemas/PostResponse"
                 }
               }
             }
@@ -116,7 +116,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": ".model/posts.json#/components/schemas/PostResponse"
+                  "$ref": "./model/posts.json#/components/schemas/PostResponse"
                 }
               }
             }
